@@ -3,5 +3,5 @@
 function greet(){
   return 'hello world!'
 }
-greet()
-// console.log(greet())
+
+console.log(greet())
