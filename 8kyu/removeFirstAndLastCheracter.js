@@ -3,11 +3,9 @@
 let str = 'eloquent'
 
 function removeChar(str){
-  console.log(str.split(''));
   let strArr = str.split('');
   strArr.splice(0, 1);
   strArr.splice(strArr.length - 1, 1);
-  console.log(strArr.join(''));
   return strArr.join('');
 };
 
