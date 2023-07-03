@@ -33,4 +33,16 @@ function findMissing(arr1, arr2) {
   return arrUniq[0]
 }
 
+// other best solution 
+// function findMissing(arr1, arr2) {
+//   arr1.sort();
+//   arr2.sort();
+  
+//   for (var i = 0; i < arr1.length; i++) {
+//     if(arr1[i] != arr2[i]) {
+//       return arr1[i];
+//     }
+//   }
+// }
+
 console.log(findMissing(arr1, arr2));
