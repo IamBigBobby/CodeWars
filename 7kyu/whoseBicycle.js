@@ -2,26 +2,26 @@
 
 let diary1 = {
   'algebra': 6,
-                                    'history': 7,
-                                    'physics': 8,
-                                    'geography': 9,
-                                    'chemistry': 10
+  'history': 7,
+  'physics': 8,
+  'geography': 9,
+  'chemistry': 10
 };
 
 let diary2 = {
   'algebra':6,
-                                    'history': 7,
-                                    'physics': 8,
-                                    'geography': 9,
-                                    'chemistry': 10
+  'history': 7,
+  'physics': 8,
+  'geography': 9,
+  'chemistry': 10
 };
 
 let diary3 = {
   'algebra': 6,
-                                    'history': 7,
-                                    'physics': 8,
-                                    'geography': 9,
-                                    'chemistry': 10
+  'history': 7,
+  'physics': 8,
+  'geography': 9,
+  'chemistry': 10
 }
 
 function whoseBicycle(diary1, diary2, diary3) {
