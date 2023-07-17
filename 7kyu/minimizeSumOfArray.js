@@ -16,3 +16,16 @@ function minSum(arr) {
 }
 
 console.log(minSum(arr));
+
+// good solustion 
+
+// function minSum(arr) {
+//   var res=0;
+//   arr = arr.sort((a,b)=>a-b);
+  
+//   while(arr.length){
+//     res += arr.pop()*arr.shift();
+//     }
+  
+//   return res
+// }
