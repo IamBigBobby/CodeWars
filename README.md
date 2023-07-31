@@ -1,2 +1,2 @@
 # CodeWars
-This repository includes my codewars solutions 
+This repository includes my JavaScript codewars solutions 
