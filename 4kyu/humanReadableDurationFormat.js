@@ -25,18 +25,41 @@
 
 // A unit of time must be used "as much as possible". It means that the function should not return 61 seconds, but 1 minute and 1 second instead. Formally, the duration specified by of a component must not be greater than any valid more significant unit of time.
 
-let seconds = 0;
+let seconds = 1000;
 
-// function formatDuration (seconds) {
-//   if (seconds === 0){
-//     return "now";
-//   }
+function formatDuration (seconds) {
+  if (seconds === 0){
+    return "now";
+  }
 
-//   let year = Math.floor(seconds / 31536000);
-//   let day = Math.floor((seconds % 31536000) / 86400);
-//   let hour = Math.floor(((seconds % 31536000) % 86400) / 3600);
-//   let minute = Math.floor((((seconds % 31536000) % 86400) % 3600) / 60);
-//   let seconds = 
-// }
+  let year = Math.floor(seconds / 31536000);
+  let day = Math.floor((seconds % 31536000) / 86400);
+  let hour = Math.floor(((seconds % 31536000) % 86400) / 3600);
+  let minute = Math.floor((((seconds % 31536000) % 86400) % 3600) / 60);
+  let remainingSeconds = Math.floor((((seconds % 31536000) % 86400) % 3600) % 60);
+
+  console.log(`${year} year, ${day} day, ${hour} hour, ${minute} minute ,${remainingSeconds} second`);
+
+  let currentArr = [year, day, hour, minute, remainingSeconds];
+  let showArr = [`${year} year`, `${day} day`, `${hour} hour`, `${minute} minute`, `${remainingSeconds} second`].map((element, index) => {
+    if (currentArr[index] > 1) {
+      return `${element}s`;
+    }
+    else if (currentArr[index] === 1){
+      return element;
+    } 
+  }).filter((element) => {
+    if (element !== undefined){
+      return element;
+    }
+  });
+
+  if (showArr.length > 1){
+    let lastElement = showArr.pop();
+    return showArr.join(', ') + ' and ' + lastElement;
+  } else {
+    return showArr[0];
+  }
+}
 
 console.log(formatDuration(seconds));
