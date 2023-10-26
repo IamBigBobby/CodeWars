@@ -7,15 +7,17 @@
 // [1, 2, [3, 4, [5]]]  -->  7
 // The input will always be an array.
 
-let a = [[[[[[[[[]]]]]]]]];
+let a = [];
 
 function deepCount(a){
-  for (let element of a){
-    if (Array.isArray(element)){
-      console.log(element);
-      deepCount(element);
-    }
+  console.log(a.length)
+  if (!Array.isArray(a)){
+    return 0;
   }
+
+  return a.length + a.reduce((sum, element) => {
+    sum + deepCount(element)
+  })
 }
 
 console.log(deepCount(a));

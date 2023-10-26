@@ -38,8 +38,6 @@ function formatDuration (seconds) {
   let minute = Math.floor((((seconds % 31536000) % 86400) % 3600) / 60);
   let remainingSeconds = Math.floor((((seconds % 31536000) % 86400) % 3600) % 60);
 
-  console.log(`${year} year, ${day} day, ${hour} hour, ${minute} minute ,${remainingSeconds} second`);
-
   let currentArr = [year, day, hour, minute, remainingSeconds];
   let showArr = [`${year} year`, `${day} day`, `${hour} hour`, `${minute} minute`, `${remainingSeconds} second`].map((element, index) => {
     if (currentArr[index] > 1) {

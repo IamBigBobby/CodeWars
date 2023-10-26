@@ -27,3 +27,4 @@ function rgb(r, g, b){
 }
 
 console.log(rgb(r, g, b));
+
