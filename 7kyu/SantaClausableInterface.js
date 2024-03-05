@@ -8,8 +8,8 @@
 // goDownTheChimney() / go_down_the_chimney
 
 function isSantaClausable(obj) {
-    if (obj.sayHoHoHo && obj.distributeGifts && obj.goDownTheChimney){
-      return true;
+    if (typeof obj.sayHoHoHo === 'function' && typeof obj.distributeGifts === 'function' && typeof obj.goDownTheChimney === 'function'){
+        return true;
     }
-   return false
-   }
+    return false
+}
